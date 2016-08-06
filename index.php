@@ -11,7 +11,7 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Mask Query String With Jquery and Ajax</title>
+	<title>Mask Query String With jQuery and Ajax</title>
 	<link rel="stylesheet" href="bootstrap.min.css" />
 	<script src="jquery.min.js"></script>
 	<style type="text/css">

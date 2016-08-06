@@ -24,7 +24,7 @@ if(!empty($_REQUEST['c'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>request test</title>
+	<title>Mask Query String With jQuery and Ajax</title>
 	<link rel="stylesheet" href="bootstrap.min.css" />
 	<script src="jquery.min.js"></script>
 	<style type="text/css">
