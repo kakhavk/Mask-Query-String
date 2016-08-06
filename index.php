@@ -100,8 +100,6 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 
 
 <script>
-
-	
 	$('#requesttestform').bind('keypress', function(e){
 		if(e.keyCode==13){
 			e.preventDefault();

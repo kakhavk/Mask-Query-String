@@ -11,3 +11,32 @@ Demo http://maskquerystring.hiutils.org/
 
 Required:
 jQuery, PHP
+
+
+```sh
+
+<script>	
+	$('#requesttestform').bind('keypress', function(e){
+		if(e.keyCode==13){
+			e.preventDefault();
+			prepareRequest();
+		}
+		
+	});
+	
+	$('#requesttestform').submit(function(e){
+		e.preventDefault();
+		prepareRequest();
+	});
+	
+	function prepareRequest(){
+		var queryString=$('#requesttestform').serialize();
+		$.get('mask.php?'+queryString, function(data, status){
+			if(data!=null && data.trim()!=""){
+				window.location='result.php?c='+data;
+			}
+		});
+	}
+</script>
+
+```
