@@ -1,4 +1,8 @@
 <?php
+/*
+ * Created By Kakhaber Kashmadze 
+ * @version 0.1
+ */
 session_start();
 
 if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
