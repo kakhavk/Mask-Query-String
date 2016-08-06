@@ -2,9 +2,11 @@
 Sometime query string puts many information, also it is not good as visual in address bar to view query string.
 Because I was created script which can help to solve this problem.
 
-At this moment script includes control with php session, but can run in another programing languages. Instead session possible with cookie and database.
+At this moment script is controled with php session, but can run in another programing languages. Instead session possible with cookie and database.
+Query string willb e stored in session and page will only request session sequence number which is id for query string in session.
+Also possible convert numbers to charater codes.
 
-Example can be viewed at http://maskquerystring.hiutils.org/
+Demo http://hiutils.org/maskquerystring/
 
 Required:
 jQuery, PHP
