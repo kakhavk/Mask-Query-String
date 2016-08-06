@@ -25,14 +25,25 @@ if(!empty($_REQUEST['c'])){
 <html lang="en">
 <head>
 	<title>request test</title>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<script src="jquery.min.js"></script>
+	<style type="text/css">
+		.wrapper{
+			margin:30px 10px 10px 40px;
+		}
+	</style>
 </head>
 <body>	
-<a href="index.php">Home</a><br ><br ><br >
-<?php	
-	echo 'Last Name : '.$request['lname']."<br />";
-	echo 'First Name : '.$request['fname']."<br />";
-	echo 'Gender : '.$gender[($request['gender'])]."<br />";
-	echo 'Country : '.$request['country']."<br />";
-?>
+<div class="wrapper">
+	<a href="index.php"><h4>Home</h4></a>
+	<h3>Mask Query String With Jquery and Ajax</h3>
+	
+	<?php	
+		echo 'Last Name : '.$request['lname']."<br />";
+		echo 'First Name : '.$request['fname']."<br />";
+		echo 'Gender : '.$gender[($request['gender'])]."<br />";
+		echo 'Country : '.$request['country']."<br />";
+	?>
+</div>
 </body>
 </html>
