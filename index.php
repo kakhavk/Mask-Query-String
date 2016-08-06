@@ -94,7 +94,7 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 	</form>
 	
 	<div class="github-block">
-		Project on Github:<a href="https://github.com/opensoftge/converter-i18n"> https://github.com/kakhavk/Mask-Query-String</a>
+		Project on Github:<a href="https://github.com/kakhavk/Mask-Query-String"> https://github.com/kakhavk/Mask-Query-String</a>
 	</div>
 </div>
 
