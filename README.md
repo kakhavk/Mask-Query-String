@@ -1,4 +1,5 @@
 ### Mask Query String With jQuery and Ajax
+
 Sometime query string puts many information, also it is not good as visual in address bar to view query string.
 Because I was created script which can help to solve this problem.
 
