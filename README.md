@@ -7,7 +7,7 @@ At this moment script is controled with php session, but can run in another prog
 Query string willb e stored in session and page will only request session sequence number which is id for query string in session.
 Also possible convert numbers to charater codes.
 
-Demo http://hiutils.org/maskquerystring/
+Demo http://maskquerystring.hiutils.org/
 
 Required:
 jQuery, PHP

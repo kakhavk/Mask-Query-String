@@ -16,7 +16,7 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 	<script src="jquery.min.js"></script>
 	<style type="text/css">
 		.wrapper{
-			margin:30px 10px 10px 10px;
+			margin:30px 10px 10px 40px;
 		}
 		
 		.field-block{
@@ -52,7 +52,7 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 			height:1px;
 		}
 		.github-block{
-			margin:10px;
+			margin-top:20px;
 		}
 	</style>
 </head>
@@ -92,11 +92,13 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 			<div class="field-submit"><input class="btn btn-primary" type="submit" id="submit" name="submit" /></div>
 		</div>
 	</form>
+	
+	<div class="github-block">
+		Project on Github:<a href="https://github.com/opensoftge/converter-i18n"> https://github.com/kakhavk/Mask-Query-String</a>
+	</div>
 </div>
 
-<div class="github-block">
-	Project on Github:<a href="https://github.com/opensoftge/converter-i18n"> https://github.com/kakhavk/Mask-Query-String</a>
-</div>
+
 <script>
 
 	
