@@ -13,8 +13,18 @@ Required:
 jQuery, PHP
 
 
+index.php
 ```sh
 
+// Initialize sequence with session
+
+session_start();
+if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
+
+```
+
+```sh
+// parse form fields and put to ajax and recieve sequence id from mask.php
 <script>	
 	$('#requesttestform').bind('keypress', function(e){
 		if(e.keyCode==13){
@@ -38,5 +48,56 @@ jQuery, PHP
 		});
 	}
 </script>
+
+```
+mask.php
+
+```sh
+
+// returns sequence number as request id
+
+session_start();
+$queryString="";
+$i=0;
+$sequence=null;
+
+foreach($_REQUEST as $k => $v){
+	if($i!=0) $queryString.="&";
+	if(!empty($v)) $queryString.=$k."=".$v;
+	$i++;
+}
+
+$_SESSION['sequence']++;
+$sequence=$_SESSION['sequence'];
+$_SESSION['request'][$sequence]=$queryString;
+echo $sequence;
+
+```
+
+result.php
+```sh
+// recieve query strings id in session with c parameter, parse and assign to array $request 
+
+$queryString=array();
+$query=array();
+
+$request=array();
+$gender=array('Female','Male');
+
+
+if(!empty($_REQUEST['c'])){
+	$c=trim($_REQUEST['c']);
+	$queryString=explode('&', $_SESSION['request'][$c]);
+	foreach($queryString as $v){
+		$query=explode('=',$v);
+		$request[($query[0])]=$query[1];
+	}
+}
+
+
+echo ' Last Name : '.$request['lname'];
+echo ' First Name : '.$request['fname'];
+echo ' Gender : '.$gender[($request['gender'])];
+echo ' Country : '.$request['country'];
 
 ```
