@@ -52,7 +52,7 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 </script>
 
 ```
-2. Use by click on element
+2. Use by clicking on element
 ```sh
 <a onclick="parseRequest(<?php echo $id; ?>)">Click</a>
 
