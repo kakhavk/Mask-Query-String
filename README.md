@@ -58,8 +58,8 @@ Use by clicking on element
 
 <script>
 function prepareRequest(id){
-	var queryString=$('#requesttestform').serialize();
-	$.get('mask.php?id='+id, function(data, status){
+	var queryString='lname=kashmadze&fname=kakhaber&gender=1';
+	$.get('mask.php?id='+id+"&"+queryString, function(data, status){
 		if(data!=null && data.trim()!=""){
 			window.location='result.php?c='+data;
 		}
