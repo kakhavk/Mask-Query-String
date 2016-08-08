@@ -58,7 +58,10 @@ Use by clicking on element
 
 <script>
 function prepareRequest(id){
-	var queryString='serviceid=23&category=22&countryid=1';
+	var service=$('#service').val();
+	var category=$('#category').val();
+	var country=$('#country').val();
+	var queryString='service='+service+'&category='+category+'&country='+country;
 	$.get('mask.php?id='+id+"&"+queryString, function(data, status){
 		if(data!=null && data.trim()!=""){
 			window.location='result.php?c='+data;
