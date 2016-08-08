@@ -58,7 +58,7 @@ Use by clicking on element
 
 <script>
 function prepareRequest(id){
-	var queryString='lname=kashmadze&fname=kakhaber&gender=1';
+	var queryString='serviceid=23&category=22&countryid=1';
 	$.get('mask.php?id='+id+"&"+queryString, function(data, status){
 		if(data!=null && data.trim()!=""){
 			window.location='result.php?c='+data;
