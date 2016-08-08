@@ -23,8 +23,10 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 
 ```
 
+1. Use with form
 ```sh
 // parse form fields and put to ajax and recieve sequence id from mask.php
+
 <script>	
 	$('#requesttestform').bind('keypress', function(e){
 		if(e.keyCode==13){
@@ -50,6 +52,25 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 </script>
 
 ```
+2. Use by click on element
+```sh
+<a onclick="parseRequest(<?php echo $id; ?>)">Click</a>
+
+<script>
+function prepareRequest(id){
+	var queryString=$('#requesttestform').serialize();
+	$.get('mask.php?id='+id, function(data, status){
+		if(data!=null && data.trim()!=""){
+			window.location='result.php?c='+data;
+		}
+	});
+}
+</script>
+
+```
+
+
+
 mask.php
 
 ```sh
