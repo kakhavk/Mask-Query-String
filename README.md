@@ -23,7 +23,7 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 
 ```
 
-1. Use with form
+Use with form
 ```sh
 // parse form fields and put to ajax and recieve sequence id from mask.php
 
@@ -52,7 +52,7 @@ if(empty($_SESSION['sequence'])) $_SESSION['sequence']=0;
 </script>
 
 ```
-2. Use by clicking on element
+Use by clicking on element
 ```sh
 <a onclick="parseRequest(<?php echo $id; ?>)">Click</a>
 
